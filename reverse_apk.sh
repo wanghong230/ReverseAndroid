@@ -12,16 +12,15 @@ function useage {
   echo "Description:The program was designed to do batch processsing which turn all the apk files in directroy to be java projects."
   echo " "
   echo " "
-  echo "Useage: ./reverse_apk.sh [-d <output dir>] <dex or apk file directory>"
-  echo " -d <output dir>: set output directory"
+  echo "Useage: ./reverse_apk.sh <output dir> <dex or apk file directory>"
+  echo " <output dir>: set the output dir to hold .class and .java files"
+  echo " <dex or apk file directory>: set the dir that holds apks files"
   echo " "
-  echo " "
-  echo $DIR
   exit
 }
 
 function dareapk {
-  $DIR$DARE -d $1 $2
+  $DIR$DARE -d $1 $2 -c
 }
 
 function jadjava {
